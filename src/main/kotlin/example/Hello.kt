@@ -1,8 +1,24 @@
 package example
 
+import kotlin.browser.window
+
+external fun require(lib: String): dynamic
+
+external fun setImmediate(fn: () -> Unit)
+
 fun main(args: Array<String>) {
-    console.log(hello("Kotlin JS"))
+    require("setimmediate")
+
+    var a = 1
+    var b = 2
+    window.alert((a + b).toString())
+
+    a = 10
+    b = 20
+    setImmediate({
+        window.alert((a + b).toString())
+    })
 }
 
-fun hello(name:String) = "Hello, $name!"
+
 
