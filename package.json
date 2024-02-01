@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/kotlin-demos/kotlin-js-hello-world-demo#readme",
   "dependencies": {
-    "setimmediate": "^1.0.5"
+    "setimmediate": "1.0.5"
   }
 }
